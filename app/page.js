@@ -1,40 +1,90 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import Modal from "./components/modal";
+import { useState } from "react";
 
 export default function Home() {
+  const [showModal1, setShowModal1] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
+  const [showModal3, setShowModal3] = useState(false);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between lg:px-48 lg:pt-24 md:p-24">
+      <div id="modal-root"></div>
       {/* answer your body's needs */}
       <ol className="my-8 lg:mx-40 xs:mx-12 space-y-4 pt-8 md:flex md:space-x-12 md:space-y-0">
         <li className="md:flex-1">
           <div className="flex flex-col space-y-2 py-2 pl-2 md:pb-0 md:pl-0 md:pt-4">
-            <Image
-              src="/assets/component-01/Image-01.jpg"
-              alt="component-01-image-01"
-              width={1440}
-              height={1848}
-              quality={100}
-            />
+            <button onClick={() => setShowModal1(true)}>
+              <Image
+                src="/assets/component-01/Image-01.jpg"
+                alt="component-01-image-01"
+                width={1440}
+                height={1848}
+                quality={100}
+              />
+            </button>
+            {showModal1 && (
+              <Modal onClose={() => setShowModal1(false)}>
+                <Image
+                  src="/assets/component-01/Image-01.jpg"
+                  alt="component-01-image-01"
+                  width="500"
+                  height="600"
+                  quality={100}
+                  className="justify-items-stretch"
+                />
+              </Modal>
+            )}
           </div>
         </li>
         <li className="md:flex-1">
           <div className="flex flex-col space-y-2 py-2 pl-2 md:pb-0 md:pl-0 md:pt-4">
-            <Image
-              src="/assets/component-01/Image-02.jpg"
-              alt="component-01-image-01"
-              width={1440}
-              height={1848}
-              quality={100}
-            />
+            <button onClick={() => setShowModal2(true)}>
+              <Image
+                src="/assets/component-01/Image-02.jpg"
+                alt="component-01-image-01"
+                width={1440}
+                height={1848}
+                quality={100}
+              />
+            </button>
+            {showModal2 && (
+              <Modal onClose={() => setShowModal2(false)}>
+                <Image
+                  src="/assets/component-01/Image-02.jpg"
+                  alt="component-01-image-02"
+                  width="500"
+                  height="600"
+                  quality={100}
+                  className="justify-items-stretch"
+                />
+              </Modal>
+            )}
           </div>
           <div className="flex flex-col space-y-2 py-2 pl-2 md:pb-0 md:pl-0 md:pt-4">
-            <Image
-              src="/assets/component-01/Image-03.jpg"
-              alt="component-01-image-01"
-              width={1440}
-              height={1848}
-              quality={100}
-            />
+            <button onClick={() => setShowModal3(true)}>
+              <Image
+                src="/assets/component-01/Image-03.jpg"
+                alt="component-01-image-01"
+                width={1440}
+                height={1848}
+                quality={100}
+              />
+            </button>
+            {showModal3 && (
+              <Modal onClose={() => setShowModal3(false)}>
+                <Image
+                  src="/assets/component-01/Image-03.jpg"
+                  alt="component-01-image-03"
+                  width="500"
+                  height="600"
+                  quality={100}
+                  className="justify-items-stretch"
+                />
+              </Modal>
+            )}
           </div>
         </li>
         <li className="md:flex-1">
