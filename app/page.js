@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-48">
+    <main className="flex min-h-screen flex-col items-center justify-between lg:p-48 md:p-24">
       {/* answer your body's needs */}
-      <ol className="my-8 mx-40 space-y-4 pt-8 md:flex md:space-x-12 md:space-y-0">
+      <ol className="my-8 lg:mx-40 xs:mx-12 space-y-4 pt-8 md:flex md:space-x-12 md:space-y-0">
         <li className="md:flex-1">
-          <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
+          <div className="flex flex-col space-y-2 py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
             <span className="text-lg font-medium text-white">
               Summer Lunch Menu by Mark Best
             </span>
@@ -26,7 +26,7 @@ export default function Home() {
           </div>
         </li>
         <li className="md:flex-1">
-          <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
+          <div className="flex flex-col space-y-2 py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
             <span className="text-lg font-medium text-white">
               A Traditional Christmas Eve, Mark Best Style
             </span>
@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </li>
         <li className="md:flex-1">
-          <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
+          <div className="flex flex-col space-y-2 py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
             <span className="text-lg font-medium text-white">
               Taking Taste Further
             </span>
@@ -71,15 +71,16 @@ export default function Home() {
       <h2 className="text-4xl font-medium text-white">
         ALL THE LATEST FROM AEG
       </h2>
-      <ol className="my-8 mx-40 space-y-4 pt-8 md:flex md:space-x-12 md:space-y-0">
+      <ol className="my-8 lg:mx-40 xs:mx-12 space-y-4 pt-8 md:flex md:space-x-12 md:space-y-0">
         <li className="md:flex-1">
-          <div className="flex flex-col space-y-1 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
+          <div className="flex flex-col space-y-1 py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
             <Image
               src="/assets/component-02/Image-01.jpg"
               alt="component-02-image-01"
               width={1440}
               height={1848}
               quality={100}
+              className="border-b-4 border-red-700"
             />
             <span className="pt-8 text-lg font-medium text-white">
               Summer Lunch Menu by Mark Best
@@ -91,7 +92,7 @@ export default function Home() {
             <span className="pt-8">
               <Link
                 href="#"
-                className="text-red-700 underline underline-offset-2"
+                className="text-white underline underline-offset-2 decoration-red-700"
               >
                 READ MORE
               </Link>
@@ -99,13 +100,14 @@ export default function Home() {
           </div>
         </li>
         <li className="md:flex-1">
-          <div className="flex flex-col space-y-2 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
+          <div className="flex flex-col space-y-2 py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
             <Image
               src="/assets/component-02/Image-02.jpg"
               alt="component-02-image-02"
               width={1440}
               height={1848}
               quality={100}
+              className="border-b-4 border-red-700"
             />
             <span className="pt-8 text-lg font-medium text-white">
               A Traditional Christmas Eve, Mark Best Style
@@ -118,7 +120,7 @@ export default function Home() {
             <span className="pt-8">
               <Link
                 href="#"
-                className="text-red-700 underline underline-offset-2"
+                className="text-white underline underline-offset-2 decoration-red-700"
               >
                 READ MORE
               </Link>
@@ -126,13 +128,14 @@ export default function Home() {
           </div>
         </li>
         <li className="md:flex-1">
-          <div className="flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
+          <div className="flex flex-col space-y-2  py-2 pl-4 md:pb-0 md:pl-0 md:pt-4">
             <Image
               src="/assets/component-02/Image-03.jpg"
               alt="component-02-image-03"
               width={1440}
               height={1848}
               quality={100}
+              className="border-b-4 border-red-700"
             />
             <span className="pt-8 text-lg font-medium text-white">
               Taking Taste Further
@@ -145,7 +148,7 @@ export default function Home() {
             <span className="pt-8">
               <Link
                 href="#"
-                className="text-red-700 underline underline-offset-2"
+                className="text-white underline underline-offset-2 decoration-red-700"
               >
                 READ MORE
               </Link>
